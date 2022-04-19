@@ -1,83 +1,51 @@
 # printf
-The project consists of normal functions, derived functions a man page and a README.md file.
+# Description
+In C programming language, printf() function is used to print the “character, string, float, integer, octal and hexadecimal values” onto the output screen.
 
-This produces output according to a format specifiers,as shown below.
+The available convertion specifiers are:
 
-       _printf("Length:[%d, %i]\n", len, len);
+%c: Prints a single character.
+%s: Prints a string of characters.
+%d: Prints integers.
+%i: Prints integers.
+%b: Prints the binary representation of an unsigned decimal.
+%u: Prints unsigned integers
+%p: Prints address of pointer
+%x: Prints the hexadecial representation of an unsigned decimal in lowercase letters
+%X:Prints the hexadecial representation of an unsigned decimal in uppercase letters
+%r: Prints a reversed string
+%R: Prints the Rot13 interpretation of a string
+Usage
+All the files are to be compiled on Ubuntu 14.04 LTS
+Compile your code with gcc -Wall -Werror -Wextra -pedantic *.c
+Include the "main.h" header file on the functions using the _printf()
+Create a file (main.c) with below contend
+Example
+#include "main.h"
+#include <stdio.h>
+/**
+ * main - Entry point
+ *
+ * Return: Always 0
+ */
 
+int main(void)
+{
+	int a;
+	int b;
+	char *str;
 
-	printf("Length:[%d, %i]\n", len2, len2);
-  
-  
-	_printf("Negative:[%d]\n", -762534);
-  
-  
-	printf("Negative:[%d]\n", -762534);
-  
-  
-	_printf("Unsigned:[%u]\n", ui);
-  
-  
-	printf("Unsigned:[%u]\n", ui);
-  
-  
-	_printf("Unsigned octal:[%o]\n", ui);
-  
-  
-	printf("Unsigned octal:[%o]\n", ui);
-  
-  
-	_printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
-  
-  
-	printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
-  
-  
-	_printf("Character:[%c]\n", 'H');
-  
-  
-	printf("Character:[%c]\n", 'H');
-  
-  
-	_printf("String:[%s]\n", "I am a string !");
-  
-  
-	printf("String:[%s]\n", "I am a string !");
-  
-  
-	_printf("Address:[%p]\n", addr);
-  
-  
-	printf("Address:[%p]\n", addr);
-  
-  
-	len = _printf("Percent:[%%]\n");
-  
-  
-	len2 = printf("Percent:[%%]\n");
-  
-  
-	_printf("Len:[%d]\n", len);
-  
-  
-	printf("Len:[%d]\n", len2);
-  
-  
-	_printf("Unknown:[%r]\n");
+	str = "school";
+	a = _printf("%r\n", "hello"); /*expected: notrebloh*/
+	printf("--->%d\n", a); /*expected: 10*/
 
+	b = _printf("%r\n", str); /*expected: loohcs*/
+	printf("%d\n", b); /*expected: 7*/
 
+	b = _printf("%r\n", str); /*expected: loohcs*/
+	printf("%d\n", b); /*expected: 7*/
+	return (0);
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-It is developed by **Eyuel** and **Tewodros**
+# Authors:
+Eyuel Endalew and Tewodros Idris
