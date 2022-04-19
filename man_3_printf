@@ -29,23 +29,9 @@ It is a character string, composed of zero or more directives, ordinary characte
 .SH BUGS
 No known bugs
 .SS colphon
-.SH Example:
-_printf("%s", text);
-
-In the Example print the value of text with %s give the format of text.
-
-.B The conversion specifiers
-
-.IP %c
-- prints character.
-.IP %s
-- prints string.
-.IP %%
-- prints percentage symbol.
-.IP %d
-- prints decimal.
-.IP %i
-- prints integer number.
+.br
+This page was created in collaboration with ALX-Holberton, 20 minutes before the submission deadline.
 
 .SH AUTHORS
-B. Eyuel Endalew and Tewodros Idris
+.B Eyuel Endalew and Tewodros Idris
+ 
